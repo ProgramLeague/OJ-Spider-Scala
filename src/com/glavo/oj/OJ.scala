@@ -25,8 +25,21 @@ class OJ(
         ) {
 
     class Page(val url: String) {
-        lazy val htmlString = Source.fromURL(url).mkString
+        lazy val htmlString: String = Source.fromURL(url).mkString
+        lazy val parser: (String, String, String, String, String, String) = {
+            var description: String = _
+            var inputDescription: String = _
+            var outputDescription: String = _
+            var sampleInput: String = _
+            var sampleOutput: String = _
+            var dataHint: String = _
 
+
+
+            htmlString.lines.foreach{s =>
+
+            }
+        }
     }
 }
 
@@ -44,8 +57,4 @@ object OJ {
 
 
 }
-
-
-
-
 
